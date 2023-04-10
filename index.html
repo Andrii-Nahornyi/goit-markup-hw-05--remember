@@ -11,6 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -25,8 +27,8 @@
 			<nav class="nav">
 				<ul class="list list-flex">
 					<li class="nav-item"><a href="./index.html" class="link nav-link accent">Studio</a></li>
-					<li class="nav-item"><a href="./portfolio.html" class="link nav-link">Portfolio</a></li>
-					<li class="nav-item"><a href="" class="link nav-link">Contacts</a></li>
+					<li class="nav-item"><a href="./portfolio.html" class="link nav-link scale-link">Portfolio</a></li>
+					<li class="nav-item"><a href="" class="link nav-link scale-link">Contacts</a></li>
 				</ul>
 			</nav>
 
@@ -43,8 +45,10 @@
 		<!-- Hero(Герой) -->
 
 		<section class="hero overlay">
-			<h1 class="hero-title">Effective Solutions <br> Your Business</h1>
-			<button type="button" class="btn hero-btn">Order Service</button>
+			<h1 class="hero-title animate__animated animate__bounceInLeft">Effective Solutions
+				<br> Your Business
+			</h1>
+			<button type="button" class="btn hero-btn" data-modal-open>Order Service</button>
 		</section>
 
 		<!-- Features(Особливості роботи) -->
@@ -114,7 +118,7 @@
 
 		<section class="section">
 			<div class="container">
-				<h2 class="section-title">Our Team</h2>
+				<h2 class="section-title" data-aos="fade-up" data-aos-anchor-placement="bottom-center">Our Team</h2>
 				<ul class="list list-flex">
 					<li class="item employee-item">
 						<img src="./image/employee-mark.jpg" alt="Mark`s photo portrait">
@@ -272,7 +276,7 @@
 
 		<section class="section">
 			<div class="container">
-				<h2 class="section-title">Customers</h2>
+				<h2 class="section-title" data-aos="fade-up" data-aos-anchor-placement="center-center">Customers</h2>
 				<ul class="list list-flex">
 					<li class="item">
 						<a href="/" class="customer-link" aria-label="official website YA and CO">
@@ -367,6 +371,22 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="backdrop is-hidden" data-modal>
+		<div class="modal">
+			<button type="button" class="modal-btn-close" data-modal-close>
+				<svg class="modal-icon" width="8" height="8">
+					<use href="./image/icons/icons.svg#close"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script src="./js/modal.js"></script>
 </body>
 
 </html>
